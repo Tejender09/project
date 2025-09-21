@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Study Arena</title>
+  <link rel="stylesheet" href="index.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^0.7.0"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main id="app-container">
+    <div class="header">
+      <h1>AI Study Arena</h1>
+      <button id="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme"></button>
+    </div>
+    <div id="response"></div>
+    <div class="action-buttons-area">
+        <button id="action-questions-btn">Sample Questions</button>
+        <button id="action-notes-btn">Generate Notes</button>
+        <button id="action-explain-btn">Explain Topic</button>
+        <button id="action-exam-btn">Mock Exam</button>
+    </div>
+    <div class="input-area">
+      <div class="difficulty-container">
+        <div id="difficulty-stars" aria-label="Set difficulty rating">
+          <span class="star" data-value="5" role="button" aria-label="Hardest">&#9733;</span>
+          <span class="star" data-value="4" role="button" aria-label="Hard">&#9733;</span>
+          <span class="star" data-value="3" role="button" aria-label="Medium">&#9733;</span>
+          <span class="star" data-value="2" role="button" aria-label="Easy">&#9733;</span>
+          <span class="star" data-value="1" role="button" aria-label="Easiest">&#9733;</span>
+        </div>
+        <div class="difficulty-label-wrapper">
+          <div id="difficulty-hover-label"></div>
+          <div class="difficulty-label">wanted</div>
+        </div>
+      </div>
+      <div class="input-wrapper">
+        <input type="text" id="prompt-input" placeholder="Ask a follow-up question..." aria-label="Follow-up question">
+        <button id="send-button" aria-label="Send message" title="Send message"></button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>
